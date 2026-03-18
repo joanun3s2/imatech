@@ -1,0 +1,47 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract futuristic purple and blue background",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "abstract purple"
+    },
+    {
+      "id": "project-store",
+      "description": "Modern E-commerce website for a boutique",
+      "imageUrl": "https://picsum.photos/seed/store/600/400",
+      "imageHint": "ecommerce store"
+    },
+    {
+      "id": "project-restaurant",
+      "description": "Elegant restaurant menu and booking site",
+      "imageUrl": "https://picsum.photos/seed/restaurant/600/400",
+      "imageHint": "restaurant website"
+    },
+    {
+      "id": "project-service",
+      "description": "Local plumbing service professional landing page",
+      "imageUrl": "https://picsum.photos/seed/plumbing/600/400",
+      "imageHint": "service landing"
+    },
+    {
+      "id": "project-gym",
+      "description": "Dynamic fitness studio landing page",
+      "imageUrl": "https://picsum.photos/seed/gym/600/400",
+      "imageHint": "fitness gym"
+    },
+    {
+      "id": "project-agency",
+      "description": "Creative agency portfolio site",
+      "imageUrl": "https://picsum.photos/seed/agency/600/400",
+      "imageHint": "creative agency"
+    },
+    {
+      "id": "project-spa",
+      "description": "Minimalist spa and wellness booking system",
+      "imageUrl": "https://picsum.photos/seed/spa/600/400",
+      "imageHint": "spa wellness"
+    }
+  ]
+}
