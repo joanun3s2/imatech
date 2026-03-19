@@ -16,15 +16,29 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: t('contact.form.success'),
-        variant: 'default',
-      });
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+
+    const formData = new FormData(e.currentTarget as HTMLFormElement);
+
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
+
+    const phone = '+5584994680558';
+
+    const text = `Olá, me chamo ${data.name}. Meu email é ${data.email} e eu gostaria de falar com você sobre: ${data.message}`;
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, '_blank');
+
+    setIsSubmitting(false);
+    toast({
+      title: t('contact.form.success'),
+      variant: 'default',
+    });
+    (e.target as HTMLFormElement).reset();
   };
 
   const contactMethods = [
@@ -98,6 +112,7 @@ export function Contact() {
                   {t('contact.form.name')}
                 </label>
                 <Input
+                  name='name'
                   required
                   className='glass border-white/10'
                   placeholder='John Doe'
@@ -106,6 +121,7 @@ export function Contact() {
               <div className='space-y-2'>
                 <label className='text-sm font-medium'>Email</label>
                 <Input
+                  name='email'
                   required
                   type='email'
                   className='glass border-white/10'
@@ -117,6 +133,7 @@ export function Contact() {
                   {t('contact.form.message')}
                 </label>
                 <Textarea
+                  name='message'
                   required
                   className='glass border-white/10 min-h-[150px]'
                   placeholder='How can I help you?'
