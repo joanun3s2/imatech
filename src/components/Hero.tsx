@@ -5,6 +5,7 @@ import { useLanguage } from './LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code } from 'lucide-react';
 import { useFadeOnScroll } from '@/hooks/use-fade-on-scroll';
+import { SOCIAL_LINKS } from '@/constants/socials';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -78,20 +79,24 @@ export function Hero() {
         </p>
 
         <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-500'>
-          <Button
-            size='lg'
-            className='rounded-full px-8 neon-glow bg-primary hover:bg-primary/90 text-white w-full sm:w-auto'
-          >
-            {t('hero.cta.quote')}
-            <ArrowRight className='ml-2 w-4 h-4' />
-          </Button>
-          <Button
-            variant='outline'
-            size='lg'
-            className='rounded-full px-8 glass hover:bg-white/5 w-full sm:w-auto'
-          >
-            {t('hero.cta.work')}
-          </Button>
+          <a href={SOCIAL_LINKS.whatsapp} target='_blank'>
+            <Button
+              size='lg'
+              className='rounded-full px-8 neon-glow bg-primary hover:bg-primary/90 text-white w-full sm:w-auto'
+            >
+              {t('hero.cta.quote')}
+              <ArrowRight className='ml-2 w-4 h-4' />
+            </Button>
+          </a>
+          <a href='#services'>
+            <Button
+              variant='outline'
+              size='lg'
+              className='rounded-full px-8 glass hover:bg-white/5 w-full sm:w-auto'
+            >
+              {t('hero.cta.work')}
+            </Button>
+          </a>
         </div>
       </div>
 
