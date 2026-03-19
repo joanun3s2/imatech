@@ -34,8 +34,8 @@ export function useFadeOnScroll(position: 'center' | 'bottom') {
 
       const distance = elementPosition - screenPosition;
 
-      let opacity = 1 - Math.abs(distance / maxDistance);
-      opacity = Math.max(0, Math.min(1, opacity));
+      let opacity = 1 - Math.abs(distance / (maxDistance + rect.height));
+      opacity = Math.max(0.5, Math.min(1, opacity));
 
       let scale = Math.max(0.6, opacity);
 
