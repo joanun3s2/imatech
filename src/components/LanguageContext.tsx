@@ -37,7 +37,7 @@ const translations = {
       'Lightning-fast load times and SEO optimization to keep you ahead of competition.',
     'portfolio.title': 'Selected Projects',
     'portfolio.subtitle':
-      'A showcase of recent work for stores, shops, and local services.',
+      'A showcase of recent work for shops, projects and local services.',
     'portfolio.view': 'View Project',
     'about.title': 'About Me',
     'about.intro':
@@ -51,6 +51,7 @@ const translations = {
     'contact.form.send': 'Send Message',
     'contact.form.success': 'Message sent successfully!',
     'footer.rights': 'All rights reserved.',
+    'common.scroll': 'Scroll to explore',
   },
   pt: {
     'nav.home': 'Início',
@@ -78,7 +79,7 @@ const translations = {
       'Tempos de carregamento ultra-rápidos e otimização de SEO para manter você à frente da concorrência.',
     'portfolio.title': 'Projetos Selecionados',
     'portfolio.subtitle':
-      'Uma vitrine de trabalhos recentes para lojas, comércios e serviços locais.',
+      'Uma vitrine de trabalhos recentes para comércios, projetos e serviços locais.',
     'portfolio.view': 'Ver Projeto',
     'about.title': 'Sobre Mim',
     'about.intro':
@@ -92,6 +93,7 @@ const translations = {
     'contact.form.send': 'Enviar Mensagem',
     'contact.form.success': 'Mensagem enviada com sucesso!',
     'footer.rights': 'Todos os direitos reservados.',
+    'common.scroll': 'Role para explorar',
   },
 };
 

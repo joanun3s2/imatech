@@ -14,49 +14,32 @@ export function Portfolio() {
 
   const projects = [
     {
-      title: 'Boutique Store',
-      category: 'E-commerce',
-      img:
-        PlaceHolderImages.find((p) => p.id === 'project-store')?.imageUrl || '',
-      hint: 'boutique store',
-    },
-    {
-      title: 'Luxe Dining',
-      category: 'Restaurant',
+      title: 'Barber shop',
+      category: 'Barber',
       img:
         PlaceHolderImages.find((p) => p.id === 'project-restaurant')
-          ?.imageUrl || '',
-      hint: 'restaurant site',
+          ?.imageUrl ||
+        'https://cdn.creativefabrica.com/2021/11/30/Barbershop-Logo-Graphics-20985229-1.jpg',
+      hint: 'dashboard for barber shop',
+      link: 'https://gestaobarber.netlify.app/',
     },
     {
-      title: 'Active Life Studio',
-      category: 'Fitness',
+      title: 'Portfolio page',
+      category: 'Tech',
       img:
-        PlaceHolderImages.find((p) => p.id === 'project-gym')?.imageUrl || '',
-      hint: 'gym landing',
+        PlaceHolderImages.find((p) => p.id === 'project-gym')?.imageUrl ||
+        'https://avatars.githubusercontent.com/u/28514118?v=4',
+      hint: 'portfolio page',
+      link: 'https://studio-1--portfolio-hmwq9.us-central1.hosted.app/',
     },
     {
-      title: 'Pro Plumbing',
-      category: 'Local Service',
+      title: 'Game demo',
+      category: 'education',
       img:
-        PlaceHolderImages.find((p) => p.id === 'project-service')?.imageUrl ||
-        '',
-      hint: 'service landing',
-    },
-    {
-      title: 'Zen Spa',
-      category: 'Wellness',
-      img:
-        PlaceHolderImages.find((p) => p.id === 'project-spa')?.imageUrl || '',
-      hint: 'spa booking',
-    },
-    {
-      title: 'Creative Pulse',
-      category: 'Agency',
-      img:
-        PlaceHolderImages.find((p) => p.id === 'project-agency')?.imageUrl ||
-        '',
-      hint: 'agency portfolio',
+        PlaceHolderImages.find((p) => p.id === 'project-store')?.imageUrl ||
+        'https://img.freepik.com/free-vector/open-treasure-chest-grass-platform-wooden-chest-with-gold-coins_172107-1307.jpg?semt=ais_hybrid&w=740&q=80',
+      hint: 'game demonstration',
+      link: 'https://rainbow-piroshki-75a757.netlify.app/',
     },
   ];
 
@@ -71,7 +54,7 @@ export function Portfolio() {
             <p className='text-muted-foreground'>{t('portfolio.subtitle')}</p>
           </div>
           <div className='text-primary font-bold text-sm tracking-widest uppercase'>
-            Scroll to explore
+            {t('common.scroll')}
           </div>
         </div>
 
@@ -85,7 +68,7 @@ export function Portfolio() {
                 src={project.img}
                 alt={project.title}
                 fill
-                className='object-cover transition-transform duration-700 group-hover:scale-110'
+                className='object-cover transition-transform duration-700 group-hover:scale-110 opacity-75'
                 data-ai-hint={project.hint}
               />
               <div className='absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity' />
@@ -97,10 +80,15 @@ export function Portfolio() {
                 <h3 className='text-2xl font-headline font-bold mb-4'>
                   {project.title}
                 </h3>
-                <div className='flex items-center text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity delay-100'>
+
+                <a
+                  className='flex items-center text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity delay-100'
+                  href={project.link}
+                  target='_blank'
+                >
                   {t('portfolio.view')}
                   <ExternalLink className='ml-2 w-4 h-4' />
-                </div>
+                </a>
               </div>
             </div>
           ))}
