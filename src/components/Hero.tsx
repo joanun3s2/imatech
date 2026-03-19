@@ -8,10 +8,13 @@ import { useFadeOnScroll } from '@/hooks/use-fade-on-scroll';
 
 export function Hero() {
   const { t } = useLanguage();
-  const fadeRef = useFadeOnScroll();
+
+  const sectionRef = useFadeOnScroll('center');
+  const fadeRef = useFadeOnScroll('bottom');
 
   return (
     <section
+      ref={sectionRef}
       id='home'
       className='relative min-h-screen flex items-center justify-center overflow-hidden pt-20'
     >
