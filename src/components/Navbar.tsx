@@ -18,6 +18,13 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const lang = navigator.language.toLowerCase();
+    if (lang.startsWith('pt')) {
+      setLanguage('pt');
+    }
+  }, []);
+
   const navLinks = [
     { name: t('nav.home'), href: '#home' },
     { name: t('nav.services'), href: '#services' },
