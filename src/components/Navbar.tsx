@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from './LanguageContext';
-import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
