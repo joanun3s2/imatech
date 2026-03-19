@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLanguage } from './LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code } from 'lucide-react';
@@ -11,6 +11,21 @@ export function Hero() {
 
   const sectionRef = useFadeOnScroll('center');
   const fadeRef = useFadeOnScroll('bottom');
+
+  const [particles, setParticles] = useState<any[]>([]);
+
+  useEffect(() => {
+    const generated = [...Array(20)].map(() => ({
+      color: `hsl(${Math.random() * 360}, 100%, 50%)`,
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      size: `${Math.random() * 13}px`,
+      duration: `${3 + Math.random() * 1}s`,
+      delay: `${Math.random() * 2}s`,
+    }));
+
+    setParticles(generated);
+  }, []);
 
   return (
     <section
@@ -24,18 +39,18 @@ export function Hero() {
 
       {/* Animated Particles Mockup (CSS only) */}
       <div className='absolute inset-0 pointer-events-none opacity-20'>
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle, i) => (
           <div
             key={i}
             className='absolute rounded-full bg-white'
             style={{
-              backgroundColor: `hsl(${Math.random() * 360}, 100%, 50%)`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 13}px`,
-              height: `${Math.random() * 13}px`,
-              animation: `float ${3 + Math.random() * 1}s infinite ease-in-out`,
-              animationDelay: `${Math.random() * 2}s`,
+              backgroundColor: particle.color,
+              top: particle.top,
+              left: particle.left,
+              width: particle.size,
+              height: particle.size,
+              animation: `float ${particle.duration} infinite ease-in-out`,
+              animationDelay: particle.delay,
             }}
           />
         ))}
