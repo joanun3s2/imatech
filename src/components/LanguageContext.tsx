@@ -46,6 +46,8 @@ const translations = {
     'contact.title': 'Get In Touch',
     'contact.subtitle':
       'Ready to start your project? Reach out via any of the channels below or fill the form.',
+    'about.quote': `I don't just write code, I solve business problems with technology.`,
+    'about.quote.detail': 'Projects Delivered',
     'contact.form.name': 'Name',
     'contact.form.message': 'Message',
     'contact.form.send': 'Send Message',
@@ -81,6 +83,9 @@ const translations = {
     'portfolio.subtitle':
       'Uma vitrine de trabalhos recentes para comércios, projetos e serviços locais.',
     'portfolio.view': 'Ver Projeto',
+    'about.quote':
+      'Eu não só escrevo código, eu resolvo problemas de negócio com tecnologia.',
+    'about.quote.detail': 'Projetos entregues',
     'about.title': 'Sobre Mim',
     'about.intro':
       'Olá, sou um desenvolvedor web freelancer dedicado a ajudar pequenas empresas a terem sucesso no mundo digital. Combinando expertise técnica com design criativo.',

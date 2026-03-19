@@ -4,6 +4,7 @@ import React from 'react';
 import { useLanguage } from './LanguageContext';
 import { Badge } from '@/components/ui/badge';
 import { useFadeOnScroll } from '@/hooks/use-fade-on-scroll';
+import Image from 'next/image';
 
 export function About() {
   const { t } = useLanguage();
@@ -46,7 +47,6 @@ export function About() {
                 {skills.map((skill) => (
                   <Badge
                     key={skill}
-                    variant='secondary'
                     className='px-4 py-2 glass hover:border-primary/50 transition-colors'
                   >
                     {skill}
@@ -58,16 +58,20 @@ export function About() {
 
           <div className='relative'>
             <div className='aspect-square glass rounded-3xl overflow-hidden neon-border'>
-              {/* This is a placeholder for a developer photo or abstract illustration */}
               <div className='absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/20' />
               <div className='flex items-center justify-center h-full'>
                 <div className='text-center p-12'>
                   <div className='w-24 h-24 bg-primary rounded-full mx-auto mb-6 flex items-center justify-center neon-glow'>
-                    <span className='text-3xl font-bold'>VD</span>
+                    <Image
+                      src='https://avatars.githubusercontent.com/u/28514118?v=4'
+                      alt='Developer Photo'
+                      width={100}
+                      height={100}
+                      className='rounded-full'
+                    />
                   </div>
                   <p className='text-muted-foreground italic'>
-                    "I don't just write code, I solve business problems with
-                    technology."
+                    {t('about.quote')}
                   </p>
                 </div>
               </div>
@@ -75,10 +79,10 @@ export function About() {
             {/* Floating metrics */}
             <div className='absolute -bottom-6 -right-6 glass p-6 rounded-2xl animate-float'>
               <p className='text-4xl font-headline font-bold text-gradient'>
-                50+
+                12+
               </p>
               <p className='text-xs uppercase tracking-widest font-medium'>
-                Projects Delivered
+                {t('about.quote.detail')}
               </p>
             </div>
           </div>
