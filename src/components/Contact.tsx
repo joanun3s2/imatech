@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MessageSquare, Mail, Instagram, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { SOCIAL_LINKS } from '@/constants/socials';
 
 export function Contact() {
   const { t } = useLanguage();
@@ -25,11 +26,9 @@ export function Contact() {
       message: formData.get('message'),
     };
 
-    const phone = '+5584994680558';
-
     const text = `Olá, me chamo ${data.name}. Meu email é ${data.email} e eu gostaria de falar com você sobre: ${data.message}`;
 
-    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    const url = `${SOCIAL_LINKS.whatsapp}?text=${encodeURIComponent(text)}`;
 
     window.open(url, '_blank');
 
@@ -46,19 +45,19 @@ export function Contact() {
       name: 'WhatsApp',
       icon: <MessageSquare />,
       color: 'hover:text-green-400',
-      link: 'https://wa.me/+5584994680558',
+      link: SOCIAL_LINKS.whatsapp,
     },
     {
       name: 'Email',
       icon: <Mail />,
       color: 'hover:text-red-400',
-      link: 'joanun3s2@gmal.com',
+      link: SOCIAL_LINKS.email,
     },
     {
       name: 'Instagram',
       icon: <Instagram />,
       color: 'hover:text-pink-400',
-      link: 'https://www.instagram.com/otaku_o_dev/',
+      link: SOCIAL_LINKS.instagram,
     },
   ];
 

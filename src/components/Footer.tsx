@@ -2,17 +2,12 @@
 
 import React from 'react';
 import { useLanguage } from './LanguageContext';
-import { Github, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Github, Instagram, Linkedin } from 'lucide-react';
+import { SOCIAL_LINKS } from '@/constants/socials';
 
 export function Footer() {
   const { t } = useLanguage();
   const year = new Date().getFullYear();
-
-  const socials = {
-    github: 'https://github.com/joanun3s2',
-    linkedin: 'https://www.linkedin.com/in/joao-paulo-nunes-de-lima-62577715a',
-    instagram: 'https://www.instagram.com/otaku_o_dev/',
-  };
 
   return (
     <footer className='py-12 border-t border-border bg-background'>
@@ -26,27 +21,27 @@ export function Footer() {
               {t('common.title')}
             </a>
             <p className='text-muted-foreground mt-2 text-sm'>
-              Building the future of local business websites.
+              {t('footer.title')}
             </p>
           </div>
 
           <div className='flex space-x-6'>
             <a
-              href={socials.github}
+              href={SOCIAL_LINKS.github}
               target='_blank'
               className='text-muted-foreground hover:text-primary transition-colors'
             >
               <Github className='w-6 h-6' />
             </a>
             <a
-              href={socials.linkedin}
+              href={SOCIAL_LINKS.linkedin}
               target='_blank'
               className='text-muted-foreground hover:text-primary transition-colors'
             >
               <Linkedin className='w-6 h-6' />
             </a>
             <a
-              href={socials.instagram}
+              href={SOCIAL_LINKS.instagram}
               target='_blank'
               className='text-muted-foreground hover:text-primary transition-colors'
             >

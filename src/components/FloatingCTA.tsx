@@ -3,13 +3,14 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
+import { SOCIAL_LINKS } from '@/constants/socials';
 
 export function FloatingCTA() {
   const { t } = useLanguage();
 
   return (
     <a
-      href='https://wa.me/+5584994680558'
+      href={SOCIAL_LINKS.whatsapp}
       target='_blank'
       rel='noopener noreferrer'
       className='fixed bottom-8 right-8 z-40 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform neon-glow group'
