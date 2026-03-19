@@ -38,6 +38,7 @@ const translations = {
     'portfolio.title': 'Selected Projects',
     'portfolio.subtitle':
       'A showcase of recent work for shops, projects and local services.',
+    'portfolio.note': `Some projects are private and can't be shown here *`,
     'portfolio.view': 'View Project',
     'about.title': 'About Me',
     'about.intro':
@@ -82,6 +83,7 @@ const translations = {
     'portfolio.title': 'Projetos Selecionados',
     'portfolio.subtitle':
       'Uma vitrine de trabalhos recentes para comércios, projetos e serviços locais.',
+    'portfolio.note': `Alguns projetos são privados e não podem ser mostrados aqui *`,
     'portfolio.view': 'Ver Projeto',
     'about.quote':
       'Eu não só escrevo código, eu resolvo problemas de negócio com tecnologia.',

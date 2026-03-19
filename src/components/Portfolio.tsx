@@ -52,6 +52,9 @@ export function Portfolio() {
               {t('portfolio.title')}
             </h2>
             <p className='text-muted-foreground'>{t('portfolio.subtitle')}</p>
+            <p className='text-muted-foreground text-sm opacity-60'>
+              {t('portfolio.note')}
+            </p>
           </div>
           <div className='text-primary font-bold text-sm tracking-widest uppercase'>
             {t('common.scroll')}
