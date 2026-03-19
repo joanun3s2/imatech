@@ -56,6 +56,7 @@ const translations = {
     'contact.workingHours': 'Working Hours',
     'contact.workingTime': 'Monday to Friday, local business hours.',
     'contact.workingUrgent': 'Available for urgent local support at any time.',
+    'contact.cta': 'Talk to me',
     'footer.rights': 'All rights reserved.',
     'footer.title': 'Building the future of local business websites.',
     'common.scroll': 'Scroll to explore',
@@ -108,6 +109,7 @@ const translations = {
     'contact.workingTime': 'Segunda a Sexta, horário local.',
     'contact.workingUrgent':
       'Disponível para suporte urgente em qualquer horário.',
+    'contact.cta': 'Fale comigo',
     'footer.rights': 'Todos os direitos reservados.',
     'footer.title': 'Construindo o futuro de negócios.',
     'common.scroll': 'Role para explorar',
