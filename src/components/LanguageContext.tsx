@@ -57,7 +57,9 @@ const translations = {
     'contact.workingTime': 'Monday to Friday, local business hours.',
     'contact.workingUrgent': 'Available for urgent local support at any time.',
     'footer.rights': 'All rights reserved.',
+    'footer.title': 'Building the future of local business websites.',
     'common.scroll': 'Scroll to explore',
+    'common.title': 'Limatech',
   },
   pt: {
     'nav.home': 'Início',
@@ -107,7 +109,9 @@ const translations = {
     'contact.workingUrgent':
       'Disponível para suporte urgente em qualquer horário.',
     'footer.rights': 'Todos os direitos reservados.',
+    'footer.title': 'Construindo o futuro de negócios.',
     'common.scroll': 'Role para explorar',
+    'common.title': 'Limatech',
   },
 };
 
